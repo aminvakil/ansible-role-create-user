@@ -9,13 +9,13 @@ galaxy_info:
     - name: Debian
       versions:
         - all
-    - EL:
+    - name: EL
       versions:
         - all
-    - Ubuntu:
+    - name: Ubuntu
       versions:
         - all
-    - Fedora:
+    - name: Fedora
       versions:
         - all
 

@@ -8,7 +8,7 @@ name: CI
 
 defaults:
   run:
-    working-directory: 'aminvakil.template'
+    working-directory: 'aminvakil.create_user'
 
 jobs:
 
@@ -19,7 +19,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'aminvakil.template'
+          path: 'aminvakil.create_user'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
@@ -39,13 +39,24 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        distro: [debian10]
+        distro:
+          - centos8
+          - centos7
+          - debian10
+          - ubuntu20.04
+          - ubuntu18.04
+          - ubuntu16.04
+          - fedora33
+          - fedora32
+          - fedora31
+          - fedora30
+          - fedora29
 
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'aminvakil.template'
+          path: 'aminvakil.create_user'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
@@ -71,7 +82,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'aminvakil.template'
+          path: 'aminvakil.create_user'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2

@@ -1,17 +1,24 @@
 ---
 galaxy_info:
   author: Amin Vakil
-  role_name: template
-  description: Template
+  role_name: create_user
+  description: Creates User
   license: GPL-3.0-only
   min_ansible_version: 2.1
   platforms:
     - name: Debian
       versions:
-        - buster
+        - all
     - EL:
       versions:
-        - 7
+        - all
+    - Ubuntu:
+      versions:
+        - all
+    - Fedora:
+      versions:
+        - all
 
   galaxy_tags:
-    - template
+    - system
+    - user

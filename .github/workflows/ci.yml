@@ -30,8 +30,8 @@ jobs:
 
       - name: Install test dependencies.
         run: |
-          apt-get remove ansible-core ansible-base ansible-lint ansible -y
-          apt-get autoremove -y
+          sudo apt-get remove ansible-core ansible-base ansible-lint ansible -y
+          sudo apt-get autoremove -y
           pip3 uninstall yamllint ansible-core ansible-base ansible-lint ansible --yes
           pip3 install yamllint ansible-base ansible-lint ansible --pre
 

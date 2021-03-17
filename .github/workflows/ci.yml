@@ -33,7 +33,7 @@ jobs:
           sudo apt-get remove ansible --purge -y && sudo apt-get autoremove -y
           sudo pip3 uninstall yamllint ansible-core ansible-base ansible-lint ansible --yes
           pip3 uninstall yamllint ansible-core ansible-base ansible-lint ansible --yes
-          pip3 install yamllint ansible-base ansible-lint ansible --pre
+          pip3 install yamllint ansible-core ansible-lint ansible --pre
 
       - name: Lint code.
         run: |

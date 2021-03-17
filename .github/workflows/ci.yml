@@ -30,7 +30,9 @@ jobs:
 
       - name: Install test dependencies.
         run: |
-          pip3 uninstall yamllint ansible-base ansible-lint ansible --yes
+          apt-get remove ansible-core ansible-base ansible-lint ansible -y
+          apt-get autoremove -y
+          pip3 uninstall yamllint ansible-core ansible-base ansible-lint ansible --yes
           pip3 install yamllint ansible-base ansible-lint ansible --pre
 
       - name: Lint code.

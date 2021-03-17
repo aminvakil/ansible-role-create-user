@@ -29,11 +29,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies.
-        run: |
-          sudo apt-get remove ansible --purge -y && sudo apt-get autoremove -y
-          sudo pip3 uninstall yamllint ansible-core ansible-base ansible-lint ansible --yes
-          pip3 uninstall yamllint ansible-core ansible-base ansible-lint ansible --yes
-          pip3 install yamllint ansible-core ansible-lint ansible --pre
+        run: pip3 install yamllint ansible-lint ansible --pre
 
       - name: Lint code.
         run: |
